@@ -26,7 +26,9 @@ export function Footer() {
               Ver ferramentas
             </Link>
             <a
-              href="mailto:contato@caiotools.com"
+              href="https://www.linkedin.com/in/caiohenriquerm"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
             >
               Entre em contato

@@ -43,7 +43,9 @@ export default function HomePage() {
             Desenvolvimento web e ferramentas personalizadas para seu negócio.
           </p>
           <a
-            href="mailto:contato@caiotools.com"
+            href="https://www.linkedin.com/in/caiohenriquerm"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 inline-flex rounded-lg border-2 border-blue-600 px-5 py-2.5 text-sm font-medium text-blue-600 hover:bg-blue-50 dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-950/50"
           >
             Entre em contato
