@@ -1,0 +1,1 @@
+Plataforma web de ferramentas online gratuitas (Next.js + Tailwind): conversor de imagem para WebP e mais. SEO, mobile-first, sem custo para o usuário.

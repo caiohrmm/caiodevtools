@@ -1,6 +1,7 @@
 {
   "name": "caio-tools",
   "version": "0.1.0",
+  "description": "Plataforma web de ferramentas online gratuitas (Next.js + Tailwind): conversor de imagem para WebP e mais.",
   "private": true,
   "scripts": {
     "dev": "next dev",
