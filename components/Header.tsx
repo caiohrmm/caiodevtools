@@ -12,6 +12,7 @@ export function Header() {
             width={256}
             height={256}
             className="h-64 w-64 object-contain"
+            priority
           />
         
         </Link>
