@@ -15,4 +15,11 @@ export const TOOLS: Tool[] = [
     href: "/tools/image-converter",
     image: "/tools/conversorimagem.png",
   },
+  {
+    slug: "qr-generator",
+    name: "Gerador de QR Code",
+    description: "Gere QR Code a partir de URL ou texto e baixe em PNG.",
+    href: "/tools/qr-generator",
+    image: "/tools/qrgenerator.png",
+  },
 ];

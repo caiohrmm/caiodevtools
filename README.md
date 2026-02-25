@@ -7,7 +7,7 @@ Plataforma web de ferramentas online gratuitas: conversão de imagens para WebP,
 ## Estado atual do projeto
 
 - **Stack:** Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS
-- **Ferramentas disponíveis:** 1 (Conversor de Imagem para WebP)
+- **Ferramentas disponíveis:** 2 (Conversor de Imagem para WebP, Gerador de QR Code)
 - **Layout:** Header e Footer com logo; home com grid de ferramentas e CTA; lista em `/tools`
 - **SEO:** metadata e OpenGraph por página, `robots.txt` e sitemap dinâmico
 - **Deploy:** build estático/SSR padrão Next.js; variáveis de ambiente para Cloudinary e URL do site
@@ -67,9 +67,12 @@ Crie um arquivo **`.env.local`** na raiz (não commitar). Use o **`.env.example`
 │   │   └── page.tsx             # Home (herói, grid de ferramentas, CTA)
 │   └── tools/
 │       ├── page.tsx             # Lista de ferramentas
-│       └── image-converter/
-│           ├── page.tsx         # Página do conversor WebP
-│           └── ImageConverterClient.tsx
+│       ├── image-converter/
+│       │   ├── page.tsx         # Página do conversor WebP
+│       │   └── ImageConverterClient.tsx
+│       └── qr-generator/
+│           ├── page.tsx         # Página do gerador de QR Code
+│           └── QrGeneratorClient.tsx
 ├── components/
 │   ├── Header.tsx
 │   ├── Footer.tsx
@@ -101,6 +104,14 @@ Crie um arquivo **`.env.local`** na raiz (não commitar). Use o **`.env.example`
 - **Saída:** Preview, tamanho original vs convertido, % de redução, download em WebP e opção “Converter outra imagem”
 
 Requer `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` e `NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET` no `.env.local`.
+
+### Gerador de QR Code (`/tools/qr-generator`)
+
+- **Entrada:** qualquer texto ou URL (campo de texto)
+- **Fluxo:** geração no navegador (lib `qrcode`), sem backend
+- **Saída:** preview do QR Code, botão **Baixar PNG** e **Gerar outro**
+
+Não requer variáveis de ambiente.
 
 ---
 
