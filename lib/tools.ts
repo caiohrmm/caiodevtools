@@ -4,6 +4,7 @@ export interface Tool {
   description: string;
   href: string;
   icon?: string;
+  image?: string;
 }
 
 export const TOOLS: Tool[] = [
@@ -12,5 +13,6 @@ export const TOOLS: Tool[] = [
     name: "Conversor de Imagem",
     description: "Converta PNG/JPG para WebP com preview e métricas de redução.",
     href: "/tools/image-converter",
+    image: "/tools/conversorimagem.png",
   },
 ];
