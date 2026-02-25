@@ -9,8 +9,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://caiotools.com"),
   title: {
-    default: "Caio Tools — Ferramentas online gratuitas",
-    template: "%s | Caio Tools",
+    default: "Caio Martins Dev Tools — Ferramentas online gratuitas",
+    template: "%s | Caio Martins Dev Tools",
+  },
+  icons: {
+    icon: "/logo.png",
   },
   description:
     "Ferramentas online gratuitas para desenvolvedores e usuários: conversão de imagens para WebP, e mais. Simples, rápido e sem instalação.",
