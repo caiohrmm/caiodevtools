@@ -10,7 +10,7 @@ export const TOOLS: Tool[] = [
   {
     slug: "image-converter",
     name: "Conversor de Imagem",
-    description: "Converta PNG e JPG para WebP com otimização de tamanho e qualidade.",
+    description: "Converta PNG/JPG para WebP com preview e métricas de redução.",
     href: "/tools/image-converter",
   },
 ];
