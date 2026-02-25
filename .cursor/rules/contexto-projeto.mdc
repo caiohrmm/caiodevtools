@@ -1,0 +1,74 @@
+---
+description: Contexto do projeto - plataforma de ferramentas web. Sempre considerar este contexto em todas as respostas.
+alwaysApply: true
+---
+
+# Contexto do Projeto — Plataforma de Ferramentas Web
+
+**Fonte:** `ContextoProjeto.md` na raiz. Use este contexto em todo prompt para estar sempre alinhado ao projeto.
+
+## Visão Geral
+
+Plataforma web com ferramentas online para usuários comuns, desenvolvedores e pequenos negócios.
+
+Objetivos: gerar valor real, SEO, portfólio profissional, converter visitantes em leads/clientes.
+
+## Stack
+
+- **Frontend:** Next.js (App Router), React, TailwindCSS, TypeScript
+- **Backend:** Node.js quando necessário; API Routes do Next.js (preferencial para MVP)
+- **Imagens:** Cloudinary (principal), Sharp (fallback)
+
+## Arquitetura
+
+Priorizar simplicidade, performance e baixo custo.
+
+Fluxo típico de ferramentas (ex.: conversão de imagem):
+1. Usuário acessa → upload → envio direto ao Cloudinary quando possível
+2. Transformação via URL (sem processamento pesado no backend)
+3. Resultado na tela + download
+
+## Estrutura esperada
+
+`/app`, `/tools` (ex.: `image-converter/page.tsx`), `/components`, `/lib`, `/services`, `/utils`
+
+## Primeira ferramenta: Conversor de Imagem (PNG/ JPG → WebP)
+
+- Upload (drag and drop), preview, conversão para WebP, qualidade opcional
+- Exibir tamanho original, convertido e % de redução; botão de download
+
+## Regras de implementação
+
+- **Upload:** máx. 5MB; aceitar só `image/png`, `image/jpeg`, `image/webp`
+- **Segurança:** validar tipo e tamanho no frontend e backend; nunca confiar só no frontend
+- **Performance:** evitar salvar arquivos desnecessários; preferir transformação via URL (Cloudinary); evitar processamento síncrono pesado no backend
+
+## Cloudinary
+
+- Upload direto do frontend quando possível
+- Transformações via URL: `f_webp`, `q_auto` ou manual
+
+## UI/UX
+
+Interface simples e moderna, mobile-first, feedback claro (loading/sucesso/erro), drag & drop, comparação antes/depois, métricas de otimização.
+
+## Estratégia de produto
+
+Cada ferramenta: URL própria (SEO), título e descrição otimizados, CTA (ex.: contato profissional).
+
+## Regras IMPORTANTES para o Cursor
+
+- NÃO adicionar complexidade desnecessária
+- NÃO criar backend pesado se Cloudinary resolver
+- SEMPRE priorizar soluções simples e funcionais
+- EVITAR dependências desnecessárias
+- SEGUIR a arquitetura deste documento
+- NÃO inventar funcionalidades fora do escopo sem instrução explícita
+
+## Filosofia
+
+Projeto deve ser: simples de manter, rápido, escalável, focado em valor real.
+
+---
+
+Para detalhes completos ou futuras expansões (contas, histórico, plano premium), consultar o arquivo `ContextoProjeto.md` na raiz do projeto.
