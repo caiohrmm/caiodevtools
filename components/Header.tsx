@@ -8,7 +8,7 @@ export function Header() {
         <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
             src="/logo.png"
-            alt="Caio Tools"
+            alt="Caio Martins Dev Tools"
             width={200}
             height={200}
             className="h-[200px] w-[200px] object-contain"
